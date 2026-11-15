@@ -6,14 +6,10 @@
 #include <string>
 using namespace std;
 
-// Generate Registration ID
-
 inline string generateRegistrationId()
 {
     return "R" + to_string(101 + registrations.size());
 }
-
-// Register for Club
 
 inline void registerForClub(string sid)
 {
@@ -62,8 +58,6 @@ inline void registerForClub(string sid)
     cout << "Club Registration Successful!\n";
 }
 
-// Cancel Club Membership
-
 inline void cancelClubMembership(string sid)
 {
     string cid;
@@ -89,8 +83,6 @@ inline void cancelClubMembership(string sid)
     cout << "Club Membership Not Found.\n";
 }
 
-// Promote First Student From Waitlist
-
 inline void promoteNextStudent(string eid)
 {
     for (auto &r : registrations)
@@ -109,8 +101,6 @@ inline void promoteNextStudent(string eid)
         }
     }
 }
-
-// Register for Event
 
 inline void registerForEvent(string sid)
 {
@@ -156,8 +146,6 @@ inline void registerForEvent(string sid)
         }
     }
 
-    // Count active registrations
-
     int count = 0;
 
     for (auto r : registrations)
@@ -171,8 +159,6 @@ inline void registerForEvent(string sid)
     }
 
     Registration r;
-
-    // Check event capacity
 
     if (count >= events[index].getCapacity())
     {
@@ -197,8 +183,6 @@ inline void registerForEvent(string sid)
     }
 }
 
-// Cancel Event Registration
-
 inline void cancelEventRegistration(string sid)
 {
     string eid;
@@ -220,9 +204,6 @@ inline void cancelEventRegistration(string sid)
 
             cout << "\nEvent Registration Cancelled Successfully.\n";
 
-            // Promote next student only if an active
-            // registration was cancelled
-
             if (wasActive)
             {
                 promoteNextStudent(eid);
@@ -235,8 +216,6 @@ inline void cancelEventRegistration(string sid)
 
     cout << "Event Registration Not Found.\n";
 }
-
-// View Event Waitlist
 
 inline void viewEventWaitlist()
 {
@@ -268,8 +247,6 @@ inline void viewEventWaitlist()
         cout << "No students in the waiting list.\n";
     }
 }
-
-// Registration Menu
 
 inline void registrationManagement(string sid)
 {
