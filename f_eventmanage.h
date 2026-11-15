@@ -8,8 +8,6 @@
 
 using namespace std;
 
-// Find assigned club
-
 inline string findEventClub(string fid)
 {
     for (auto a : assignments)
@@ -21,14 +19,10 @@ inline string findEventClub(string fid)
     return "";
 }
 
-// Generate event ID
-
 inline string generateEventId()
 {
     return "E" + to_string(101 + events.size());
 }
-
-// Create event
 
 inline void createFacultyEvent(string cid)
 {
@@ -64,8 +58,6 @@ inline void createFacultyEvent(string cid)
     cout << "Event ID: " << eid << endl;
 }
 
-// View all assigned club events
-
 inline void viewFacultyEvents(string cid)
 {
     cout << "\n========== CLUB EVENTS ==========\n";
@@ -87,8 +79,6 @@ inline void viewFacultyEvents(string cid)
     if (count == 0)
         cout << "No events available.\n";
 }
-
-// Update event date
 
 inline void updateFacultyEventDate(string cid)
 {
@@ -114,8 +104,6 @@ inline void updateFacultyEventDate(string cid)
 
     cout << "\nEvent not found in your assigned club.\n";
 }
-
-// Event management menu
 
 inline void eventManagement(string fid)
 {
