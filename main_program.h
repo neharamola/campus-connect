@@ -4,18 +4,8 @@
 
 using namespace std;
 
-
-// ========================================
-// INCLUDE COMMON FILES
-// ========================================
-
 #include "file.h"
 #include "admin.h"
-
-
-// ========================================
-// INCLUDE FACULTY MODULES
-// ========================================
 
 #include "faculty_login.h"
 #include "f_clubOview.h"
@@ -23,21 +13,11 @@ using namespace std;
 #include "f_attendance_certificate.h"
 #include "f_feedback.h"
 
-
-// ========================================
-// INCLUDE STUDENT MODULES
-// ========================================
-
 #include "student_login.h"
 #include "s_clubD.h"
 #include "s_recomm.h"
 #include "s_Res.h"
 #include "s_record.h"
-
-
-// ========================================
-// DEFINE SHARED VECTORS
-// ========================================
 
 vector<Student> students;
 vector<Faculty> faculties;
@@ -48,11 +28,6 @@ vector<Registration> registrations;
 vector<Attendance> attendanceRecords;
 vector<Certificate> certificates;
 vector<Feedback> feedbacks;
-
-
-// ========================================
-// FACULTY DASHBOARD
-// ========================================
 
 void facultyDashboard(string fid)
 {
@@ -100,11 +75,6 @@ void facultyDashboard(string fid)
     } while (choice != 5);
 }
 
-
-// ========================================
-// STUDENT DASHBOARD
-// ========================================
-
 void studentDashboard(string sid)
 {
     int choice;
@@ -151,11 +121,6 @@ void studentDashboard(string sid)
     } while (choice != 5);
 }
 
-
-// ========================================
-// STUDENT ACCESS
-// ========================================
-
 void studentAccess()
 {
     int choice;
@@ -198,11 +163,6 @@ void studentAccess()
 
     } while (choice != 3);
 }
-
-
-// ========================================
-// MAIN FUNCTION
-// ========================================
 
 int main()
 {
